@@ -7,27 +7,150 @@
     <link rel="stylesheet" href="/css/tailwind.css">
 </head>
 
-<body>
+<body class="bg-blue-300">
 
-    <div class="m-auto text-center max-w-lg">
+  <!-- based on example from https://ttntm.me/blog/tailwind-responsive-menu/ -->
+  <!-- header and menu content -->
+  <header id="top" class="w-full flex flex-col fixed sm:relative bg-white pin-t pin-r pin-l shadow-lg">
+  <nav id="site-menu" class="flex flex-col sm:flex-row w-full justify-between items-center px-4 sm:px-6 py-1 bg-green-600 shadow sm:shadow-none">
+    <!-- logo and company name section -->
+    <div class="w-full sm:w-auto self-start sm:self-center flex flex-row sm:flex-none flex-no-wrap justify-between items-center">
+      <a href="#" class="flex space-x-4 no-underline py-1">
+        <img class="h-12" src="/img/constLogo.png" alt="Construction Machinery Logo">
+        <h1 class="font-bold text-lg text-white tracking-widest">ENVIRON <br>BUILDERS</h1>
+      </a>
+      <button id="menuBtn" class="hamburger block sm:hidden focus:outline-none" type="button" onclick="navToggle();">
+        <span class="hamburger__top-bun"></span>
+        <span class="hamburger__bottom-bun"></span>
+      </button>
+    </div>
+    <!-- End logo and company name section -->
+    <div id="menu" class="w-full sm:w-auto self-end sm:self-center sm:flex flex-col sm:flex-row items-center h-full py-1 pb-4 sm:py-0 sm:pb-0 hidden">
+      <a class="text-white font-bold rounded-lg pl-4 hover:bg-gray-600 hover:text-white text-lg w-full no-underline sm:w-auto sm:pr-4 py-2 sm:py-1 sm:pt-2" href="https://ttntm.me/blog/tailwind-responsive-menu/" target="_blank">About Us</a>
+      <a class="text-white font-bold rounded-lg pl-4 hover:bg-gray-600 hover:text-white text-lg w-full no-underline sm:w-auto sm:px-4 py-2 sm:py-1 sm:pt-2" href="#bottom">Testimonials</a>
+      <a class="text-white font-bold rounded-lg pl-4 hover:bg-gray-600 hover:text-white text-lg w-full no-underline sm:w-auto sm:px-4 py-2 sm:py-1 sm:pt-2" href="#bottom">Contact</a>
+    </div>
+  </nav>
+</header>
+<!-- end header and menu content -->
 
-      <div class="bg-yellow-200 p-10">
-        <h1 class="text-red-600">Hello World</h1>
+<main class="content">
+  <!-- first part of main section -->
+  <div class="bg-gray-100 grid lg:grid-cols-2 2xl:grid-cols-5">
+   <div class="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:px-12 lg:py-24 lg:max-w-full xl:mr-0 2xl:col-span-2">
+       <div class="xl:max-w-xl">
+       <img class="mt-6 pt-2 rounded-lg shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover object-center lg:hidden" src="/img/fieldWindmills.jpg" alt="English Hills and Windmills">
+       <h1 class="mt-6 md:text-6xl font-bold text-gray-900 sm:mt-8 sm:text-3xl lg:text-3xl xl:text-4xl">Build alongside the environment.
+           <br class="sm:hidden md:hidden">
+           <br class="hidden lg:inline sm:inline">
+           <span class="text-green-700">Without working against it.</span></h1>
+       <p class="mt-2  text-gray-600 sm:mt-4 sm:text-2xl">
+       Environ Builders understands the importance of sustainability.
+       We work with you to build new eco friendly structures or renew existing
+       ones to incorporate best practices.
+       </p>
 
-        <ul class="list-none">
-          <li class="inline">Home</li>
-          <li class="inline">Contact   </li>
-          <li class="inline">About</li>
-        </ul>
+       <div class="mt-4 space-x-1 sm:mt-6">
+           <a class="btn btn-primary shadow-lg hover:-translate-y-0.5 transform transition" href="#">Book your consult</a>
+           <a class="btn btn-secondary" href="#more">Learn More</a>
+       </div>
+
+   </div>
+   </div>
+   <!-- image to use for split panel view at larger break point -->
+   <div class="hidden relative lg:block 2xl:col-span-3">
+       <img class="absolute inset-0 w-full h-full object-cover object-center" src="/img/fieldWindmills.jpg" alt="English Hills and Windmills">
+
+   </div>
+</div>
+  <!-- end first part of main section -->
+
+  <!-- second part of main section -->
+  <div class="min-h-screen text-center py-24">
+    <h2 class="text-xl font-bold text-red-900">Menu is sticky for mobile viewports; otherwise just scroll down to make the menu sticky.</h2>
+
+  </div>
+  <!-- second part of main section -->
+
+  <!-- third part of main section 2/3s width of screen -->
+  <div id="more" class="flex flex-col w-2/3 mx-auto mb-24 tracking-wide">
+    <h2 class="my-3">I must explain</h2>
+    <p class="my-3">The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.
+    </p>
+    <h2 class="my-3">On the other hand</h2>
+    <p class="my-3"> European languages. It will be as simple as Occidental; in fact, it will be Occidental. To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is.The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary.
+    </p>
+    <h2 class="my-3">A wonderful serenity</h2>
+    <p class="my-3">he languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators.
+    </p>
+    <div class="w-full sm:w-2/3 h-px bg-grey-light mx-auto my-12"></div>
+    <!-- link to top of page -->
+    <a href="#top" id="bottom" class="inline-block max-w-xs self-center bg-green-700 text-center text-white hover:text-white no-underline border rounded-full border-green-700 hover:border-red-900 hover:bg-red-900 px-12 py-2">Go to Top</a>
+  </div>
+  <!-- third part of main section 2/3s width of screen -->
+</main>
+<!-- end main section -->
+
+
+<footer class="footer bg-green-600 relative pt-1 ">
+    <div class="container mx-auto px-6">
+      <!-- Logo and Company Name -->
+      <div class="hidden sm:inline w-full sm:w-auto self-start sm:self-center flex flex-row sm:flex-none flex-no-wrap justify-between items-center sm:float-right hover:bg-green-500">
+        <a href="#top" class="flex space-x-4 no-underline py-1">
+          <img class="h-12" src="/img/constLogo.png" alt="Construction Machinery Logo">
+          <h1 class="font-bold text-sm text-white tracking-wide">ENVIRON <br>BUILDERS</h1>
+        </a>
       </div>
 
-      <div class="bg-gray-500 p-28">
+        <div class="sm:flex sm:mt-2">
+            <div class="mt-2 sm:mt-0 sm:w-full sm:px-1 flex flex-col md:flex-row justify-between">
+                <div class="flex flex-col">
+                    <span class=""><a href="#" class="tracking-tighter text-white font-bold rounded-lg pl-4 pr-4 hover:bg-gray-600 hover:text-white text-sm w-full no-underline sm:w-auto">About Us</a></span>
+                    <span class=""><a href="#" class="tracking-tighter text-white font-bold rounded-lg pl-4 pr-4 hover:bg-gray-600 hover:text-white text-sm w-full no-underline sm:w-auto">Contact</a></span>
+                    <span class=""><a href="#" class="tracking-tighter text-white font-bold rounded-lg pl-4 pr-4 hover:bg-gray-600 hover:text-white text-sm w-full no-underline sm:w-auto">Something Else</a></span>
+                </div>
 
-      </div>
+            </div>
+        </div>
+        <p class="text-sm text-white pb-4 font-bold text-center">
+            © 2021 by ENVIRON BUILDERS
+        </p>
 
     </div>
+    <div class="container mx-auto px-6">
+        <div class=" border-t-2 border-white flex flex-col items-center">
+            <div class="sm:w-2/3 text-center py-2">
+
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- end footer section -->
 
 </body>
 
+<script type="text/javascript">
+var nav = document.getElementById('site-menu');
+var header = document.getElementById('top');
+
+window.addEventListener('scroll', function() {
+if (window.scrollY >=400) { // adjust this value based on site structure and header image height
+  nav.classList.add('nav-sticky');
+  header.classList.add('pt-scroll');
+} else {
+  nav.classList.remove('nav-sticky');
+  header.classList.remove('pt-scroll');
+}
+});
+
+function navToggle() {
+      var btn = document.getElementById('menuBtn');
+      var nav = document.getElementById('menu');
+
+      btn.classList.toggle('open');
+      nav.classList.toggle('flex');
+      nav.classList.toggle('hidden');
+  }
+</script>
 
 </html>
