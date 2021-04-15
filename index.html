@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/tailwind.css">
 </head>
 
-<body class="">
+<body class="bg-gray-100">
 
   <!-- based on example from https://ttntm.me/blog/tailwind-responsive-menu/ -->
   <!-- header and menu content -->
@@ -69,21 +69,28 @@
 
 
   <!-- second part of main section -->
-<h2 class="text-5xl font-bold text-center mt-12 p-12 uppercase text-green-700">Some of our projects</h2>
+<h2 class="text-3xl sm:text-5xl font-bold text-center mt-12 p-12 uppercase text-green-700">Some of our projects</h2>
 <!-- First project -->
   <!-- Image for desktop view -->
-  <div class="grid lg:grid-cols-2 2xl:grid-cols-5 min-h-screen text-center py-12">
+  <div class="grid lg:grid-cols-2 2xl:grid-cols-5 min-h-screen text-center ">
     <div class="hidden relative lg:block 2xl:col-span-3">
-        <img class="absolute inset-0 w-full h-full object-cover object-center" src="/img/fieldWindmills.jpg" alt="Rolling hills and windmills">
+        <img class="absolute inset-0 w-full h-full object-cover object-center pl-12 py-24" style="width:600px" src="/img/fieldWindmills.jpg" alt="Rolling hills and windmills">
     </div>
 
+    <!-- responsive h2 -->
+    <h2 class="sm:hidden uppercase font-bold text-green-700 text-lg">
+      Lorum ipsum dolor sit amet
+    </h2>
     <!-- Image for responsive view -->
-    <img class="mt-6 pt-2 rounded-lg shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover object-center lg:hidden" src="/img/fieldWindmills.jpg" alt="Rolling hills and windmills">
+    <div class="pl-4 sm:hidden">
+      <img class="mt-4 pt-2 rounded-xl shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover object-center lg:hidden" style="width:450px" src="/img/fieldWindmills.jpg" alt="Rolling hills and windmills">
+    </div>
     <div class="p-4">
-      <h2 class="uppercase font-bold mt-4 text-green-700">
+      <h2 class="hidden uppercase font-bold mt-4 text-green-700 sm:inline">
         Lorem ipsum dolor sit amet
       </h2>
-      <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl text-justify">Inani vocent viderer te per, et sed diceret singulis dissentiet. Iisque
+
+      <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl text-justify p-4">Inani vocent viderer te per, et sed diceret singulis dissentiet. Iisque
         vocibus ne vis, in vel constituam delicatissimi, mei quem melius maiorum
         ea. Ea vulputate definiebas dissentiet has. Id quodsi disputando mei, ex
         ius placerat interpretaris, in ius consul instructior definitiones. Ut
@@ -92,20 +99,13 @@
       </p>
       <br>
 
-      <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl text-justify">
+      <p class="mt-2 text-gray-600 sm:mt-2 sm:text-xl text-justify p-4">
         Est mutat novum sapientem ea, eu lucilius mediocrem sea, ad quo autem
         tractatos. Ei dolor qualisque mea, et clita molestie moderatius vel, cum
         eu quando volutpat. Ex choro tempor his, cu his probatus consequat,
         mucius maiorum consetetur an nam. Quot habeo minimum sit te, elitr
         sensibus sit te. Mea expetenda adversarium cu, no affert feugiat saperet
         vel.
-      </p>
-      <br>
-      <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl text-justify">
-        Nec no tantas complectitur, docendi platonem te sea. Agam sadipscing ne
-        est. Te sit oportere postulant necessitatibus. Ad equidem corpora per,
-        te congue vocent praesent ius. Mei evertitur deterruisset ad, ius ut
-        insolens intellegebat, illud vitae ad sit.
       </p>
     </div>
   </div>
@@ -115,16 +115,22 @@
   <!-- Image for desktop view -->
   <div class="grid lg:grid-cols-2 2xl:grid-cols-5 min-h-screen text-center py-12">
     <div class="hidden relative lg:block 2xl:col-span-3">
-        <img class="absolute inset-0 w-full h-full object-cover object-center" src="/img/fieldWindmills.jpg" alt="Rolling hills and windmills">
+        <img class="absolute inset-0 w-full h-full object-cover object-center pl-12 py-24" style="width:600px"  src="/img/buildingSiteTrees.jpg" alt="City building site and strip of trees and green space">
     </div>
 
+    <!-- responsive h2 -->
+    <h2 class="sm:hidden uppercase font-bold text-green-700 text-lg">
+      Lorum ipsum dolor sit amet
+    </h2>
     <!-- Image for responsive view -->
-    <img class="mt-6 pt-2 rounded-lg shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover object-center lg:hidden" src="/img/fieldWindmills.jpg" alt="Rolling hills and windmills">
+    <div class="pl-4 sm:hidden">
+      <img class="mt-4 pt-2 rounded-lg shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover object-center lg:hidden  rounded-xl" style="width:450px" src="/img/buildingSiteTrees.jpg" alt="City building site and strip of trees and green space">
+    </div>
     <div class="p-4">
-      <h2 class="uppercase font-bold mt-4 text-green-700">
+      <h2 class="hidden uppercase font-bold mt-4 text-green-700 sm:inline">
         Lorem ipsum dolor sit amet
       </h2>
-      <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl text-justify">Inani vocent viderer te per, et sed diceret singulis dissentiet. Iisque
+      <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl text-justify p-4">Inani vocent viderer te per, et sed diceret singulis dissentiet. Iisque
         vocibus ne vis, in vel constituam delicatissimi, mei quem melius maiorum
         ea. Ea vulputate definiebas dissentiet has. Id quodsi disputando mei, ex
         ius placerat interpretaris, in ius consul instructior definitiones. Ut
@@ -140,13 +146,6 @@
         mucius maiorum consetetur an nam. Quot habeo minimum sit te, elitr
         sensibus sit te. Mea expetenda adversarium cu, no affert feugiat saperet
         vel.
-      </p>
-      <br>
-      <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl text-justify">
-        Nec no tantas complectitur, docendi platonem te sea. Agam sadipscing ne
-        est. Te sit oportere postulant necessitatibus. Ad equidem corpora per,
-        te congue vocent praesent ius. Mei evertitur deterruisset ad, ius ut
-        insolens intellegebat, illud vitae ad sit.
       </p>
     </div>
   </div>
@@ -156,13 +155,20 @@
   <!-- Image for desktop view -->
   <div class="grid lg:grid-cols-2 2xl:grid-cols-5 min-h-screen text-center py-12">
     <div class="hidden relative lg:block 2xl:col-span-3">
-        <img class="absolute inset-0 w-full h-full object-cover object-center" src="/img/fieldWindmills.jpg" alt="Rolling hills and windmills">
+        <img class="absolute inset-0 w-full h-full object-cover object-center pl-12 py-24" style="width:600px"  src="/img/fieldSolarPanels.jpg" alt="Green field with solar panels">
     </div>
 
+    <!-- responsive h2 -->
+    <h2 class="sm:hidden uppercase font-bold text-green-700 text-lg">
+      Lorum ipsum dolor sit amet
+    </h2>
     <!-- Image for responsive view -->
-    <img class="mt-6 pt-2 rounded-lg shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover object-center lg:hidden" src="/img/fieldWindmills.jpg" alt="Rolling hills and windmills">
+    <div class="pl-4 sm:hidden">
+      <img class="mt-4 pt-2 rounded-xl shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover object-center lg:hidden" style="width:450px" src="/img/fieldSolarPanels.jpg" alt="Green field with solar panels">
+    </div>
     <div class="p-4">
-      <h2 class="uppercase font-bold mt-4 text-green-700">
+      <!-- desktop h2 -->
+      <h2 class="hidden uppercase font-bold mt-4 text-green-700 sm:inline">
         Lorem ipsum dolor sit amet
       </h2>
       <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl text-justify">Inani vocent viderer te per, et sed diceret singulis dissentiet. Iisque
@@ -181,13 +187,6 @@
         mucius maiorum consetetur an nam. Quot habeo minimum sit te, elitr
         sensibus sit te. Mea expetenda adversarium cu, no affert feugiat saperet
         vel.
-      </p>
-      <br>
-      <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl text-justify">
-        Nec no tantas complectitur, docendi platonem te sea. Agam sadipscing ne
-        est. Te sit oportere postulant necessitatibus. Ad equidem corpora per,
-        te congue vocent praesent ius. Mei evertitur deterruisset ad, ius ut
-        insolens intellegebat, illud vitae ad sit.
       </p>
     </div>
   </div>
@@ -197,13 +196,19 @@
   <!-- Image for desktop view -->
   <div class="grid lg:grid-cols-2 2xl:grid-cols-5 min-h-screen text-center py-12">
     <div class="hidden relative lg:block 2xl:col-span-3">
-        <img class="absolute inset-0 w-full h-full object-cover object-center" src="/img/fieldWindmills.jpg" alt="Rolling hills and windmills">
+        <img class="absolute inset-0 w-full h-full object-cover object-center pl-12 py-24" style="width:600px"  src="/img/highBuildingGreenSpace.jpg" alt="High rise building surrounded by trees and other greenery">
     </div>
 
+    <!-- responsive h2 -->
+    <h2 class="sm:hidden uppercase font-bold text-green-700 text-lg">
+      Lorum ipsum dolor sit amet
+    </h2>
     <!-- Image for responsive view -->
-    <img class="mt-6 pt-2 rounded-lg shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover object-center lg:hidden" src="/img/fieldWindmills.jpg" alt="Rolling hills and windmills">
+    <div class="pl-4 sm:hidden">
+      <img class="mt-4 pt-2 rounded-xl shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover object-center lg:hidden" style="width:450px" src="/img/highBuildingGreenSpace.jpg" alt="High rise building surrounded by trees and other greenery">
+    </div>
     <div class="p-4">
-      <h2 class="uppercase font-bold mt-4 text-green-700">
+      <h2 class="hidden uppercase font-bold mt-4 text-green-700 sm:inline">
         Lorem ipsum dolor sit amet
       </h2>
       <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl text-justify">Inani vocent viderer te per, et sed diceret singulis dissentiet. Iisque
@@ -222,13 +227,6 @@
         mucius maiorum consetetur an nam. Quot habeo minimum sit te, elitr
         sensibus sit te. Mea expetenda adversarium cu, no affert feugiat saperet
         vel.
-      </p>
-      <br>
-      <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl text-justify">
-        Nec no tantas complectitur, docendi platonem te sea. Agam sadipscing ne
-        est. Te sit oportere postulant necessitatibus. Ad equidem corpora per,
-        te congue vocent praesent ius. Mei evertitur deterruisset ad, ius ut
-        insolens intellegebat, illud vitae ad sit.
       </p>
     </div>
   </div>
@@ -239,7 +237,7 @@
   <h1 class="text-5xl font-bold text-center mt-12 p-12 uppercase text-green-700">
     Testimonials
   </h1>
-  <div class="relative p-5 lg:px-20 flex flex-col md:flex-row items-center justify-center">
+  <div class="p-5 lg:px-20 flex flex-col md:flex-row items-center justify-center">
     <div class="max-w-xs rounded-2xl overflow-hidden shadow-lg m-8">
       <img class="w-full" src="https://tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains">
       <div class="px-6 py-4">
