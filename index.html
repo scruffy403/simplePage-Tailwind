@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/tailwind.css">
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-white">
 
   <!-- based on example from https://ttntm.me/blog/tailwind-responsive-menu/ -->
   <!-- header and menu content -->
@@ -68,7 +68,7 @@
   <!-- end first part of main section -->
 
   <!-- Second part of main section -->
-<h2 class="text-3xl sm:text-5xl font-bold text-center mt-12 p-12 uppercase text-green-700">Some of our projects</h2>
+<h1 class="text-3xl sm:text-5xl font-bold text-center mt-12 p-12 uppercase text-green-700">Some of our projects</h1>
 <!-- First project -->
   <div class="grid lg:grid-cols-2 2xl:grid-cols-5 min-h-screen text-center py-12">
     <!-- Image for desktop view -->
@@ -190,8 +190,8 @@
   <!-- End third project -->
 
   <!-- Fourth project -->
-  <!-- Image for desktop view -->
   <div class="grid lg:grid-cols-2 2xl:grid-cols-5 min-h-screen text-center py-12">
+    <!-- Image for desktop view -->
     <div class="hidden relative lg:block 2xl:col-span-3">
         <img class="absolute inset-0 w-full h-full object-cover object-center pl-12 py-24" style="width:600px"  src="/img/highBuildingGreenSpace.jpg" alt="High rise building surrounded by trees and other greenery">
     </div>
@@ -232,7 +232,7 @@
 
   <!-- Testimonials section -->
   <div class="border-8  m-2 border-blue-600 rounded-xl">
-    <h1 class="text-5xl font-bold text-center mt-12 p-12 uppercase text-green-700">
+    <h1 class="text-3xl sm:text-5xl font-bold text-center mt-12 p-12 uppercase text-green-700">
       Testimonials
     </h1>
     <div class="p-5 lg:px-20 flex flex-col md:flex-row items-center justify-center">
@@ -276,16 +276,46 @@
   <!-- fourth part of main section 2/3s width of screen -->
   <div class="container">
     <div id="more" class="flex flex-col w-2/3 mx-auto mb-24 tracking-wide">
+      <h1 class="text-3xl sm:text-5xl font-bold text-center mt-12 p-12 uppercase text-green-700">
+        About Us
+      </h1>
 
-      <h2 class="my-3">I must explain</h2>
-      <p class="my-3">The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.
+      <h2 class="my-3 text-green-700 text-xl text-center font-bold">Our History</h2>
+      <p class="">
+        Vestibulum eros eros, luctus vel justo ut, congue suscipit
+        ligula. Nullam lobortis massa vitae elit fermentum, et luctus nulla
+        lacinia. Sed elementum bibendum augue, eu vulputate odio interdum non.
+        Curabitur suscipit vehicula metus ut suscipit. Proin at consequat nibh.
+        Vivamus ultrices eu est quis facilisis. Morbi facilisis iaculis ex.
       </p>
-      <h2 class="my-3">On the other hand</h2>
-      <p class="my-3"> European languages. It will be as simple as Occidental; in fact, it will be Occidental. To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is.The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary.
+      <br>
+      <p class="">
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+        cubilia curae; Proin eu nibh eu elit iaculis malesuada. Nullam
+        sollicitudin hendrerit eleifend. Curabitur vehicula tempus nunc, a
+        sollicitudin ex eleifend eget. Cras at velit at libero tempus cursus.
+        Aenean a arcu ex. Sed ac nisl dolor. Curabitur nec tortor eget massa
+        pharetra placerat. Donec lacinia et velit eget hendrerit. Sed vulputate
+        nunc eu iaculis scelerisque.
       </p>
-      <h2 class="my-3">A wonderful serenity</h2>
-      <p class="my-3">he languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators.
-      </p>
+      <!-- Image for responsive view -->
+      <div class="pl-4 sm:hidden">
+        <img class="mt-4 pt-2 rounded-xl shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover object-center lg:hidden" style="width:450px" src="/img/constructionCrew.jpg" alt="High rise building surrounded by trees and other greenery">
+      </div>
+      <!-- Image for desktop view -->
+      <div class="relative">
+          <img class="hidden sm:inline ml-28 sm:mt-8 rounded-xl shadow-xl sm:w-full sm:h-auto sm:object-cover object-center" style="width:600px"  src="/img/constructionCrew.jpg" alt="High rise building surrounded by trees and other greenery">
+      </div>
+      <h2 class="my-3 text-green-700 text-xl text-center font-bold mt-10">Our Values</h2>
+      <ul class="list-disc">
+        <li class="py-2">Aenean a scelerisque mauris. Proin nec est vulputate, faucibus leo sed, varius libero.</li>
+        <li class="py-2">Assumenda, quia temporibus eveniet a libero incidunt suscipit</li>
+        <li class="py-2">Quidem, ipsam illum quis sed voluptatum quae eum fugit earum</li>
+        <li class="py-2">Phasellus sed ante at urna luctus volutpat vel id dolor.</li>
+        <li class="py-2"> Aliquam erat volutpat. Nam dui ex, vulputate id condimentum et, pretium eu ligula.</li>
+        <li class="py-2">Aliquam a orci bibendum orci posuere cursus lacinia non ex. Nunc nec risus elit. </li>
+      </ul>
+
       <div class="w-full sm:w-2/3 h-px bg-grey-light mx-auto my-12"></div>
       <!-- link to top of page -->
       <a href="#top" id="bottom" class="inline-block max-w-xs self-center bg-green-700 text-center text-white hover:text-white no-underline border rounded-full border-green-700 hover:border-red-900 hover:bg-red-900 px-12 py-2">Go to Top</a>
