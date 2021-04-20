@@ -1,0 +1,479 @@
+<!-- index.html -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+    
+<script type="module" crossorigin src="/assets/index.d463412e.js"></script>
+  <link rel="stylesheet" href="/assets/index.dda90994.css">
+</head>
+
+<body class="bg-white">
+
+  <!-- based on example from https://ttntm.me/blog/tailwind-responsive-menu/ -->
+  <!-- header and menu content -->
+  <header id="top" class="w-full flex flex-col fixed sm:relative bg-white pin-t pin-r pin-l shadow-lg">
+  <nav id="site-menu" class="flex flex-col sm:flex-row w-full justify-between items-center px-4 sm:px-6 py-1 bg-green-700 shadow sm:shadow-none">
+    <!-- logo and company name section -->
+    <div class="w-full sm:w-auto self-start sm:self-center flex flex-row sm:flex-none flex-no-wrap justify-between items-center">
+      <a href="#" class="flex space-x-4 no-underline py-1">
+        <img class="h-12" src="data:image/png;base64,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" alt="Construction Machinery Logo">
+        <h1 class="font-bold text-lg text-white tracking-widest">ENVIRON <br>BUILDERS</h1>
+      </a>
+      <button id="menuBtn" class="hamburger block sm:hidden focus:outline-none" type="button" onclick="navToggle();">
+        <span class="hamburger__top-bun"></span>
+        <span class="hamburger__bottom-bun"></span>
+      </button>
+    </div>
+    <!-- End logo and company name section -->
+    <div id="menu" class="w-full sm:w-auto self-end sm:self-center sm:flex flex-col sm:flex-row items-center h-full py-1 pb-4 sm:py-0 sm:pb-0 hidden">
+      <a class="text-white font-bold rounded-lg pl-4 hover:bg-red-700 hover:text-white text-lg w-full no-underline sm:w-auto sm:px-4 py-2 sm:py-1 sm:pt-2" href="#contact">Book Your Consult</a>
+      <a class="text-white font-bold rounded-lg pl-4 hover:bg-gray-600 hover:text-white text-lg w-full no-underline sm:w-auto sm:pr-4 py-2 sm:py-1 sm:pt-2" href="https://ttntm.me/blog/tailwind-responsive-menu/" target="_blank">About Us</a>
+      <a class="text-white font-bold rounded-lg pl-4 hover:bg-red-700 hover:text-white text-lg w-full no-underline sm:w-auto sm:px-4 py-2 sm:py-1 sm:pt-2" href="#contact">Projects</a>
+      <a class="text-white font-bold rounded-lg pl-4 hover:bg-gray-600 hover:text-white text-lg w-full no-underline sm:w-auto sm:px-4 py-2 sm:py-1 sm:pt-2" href="#bottom">Testimonials</a>
+      <a class="text-white font-bold rounded-lg pl-4 hover:bg-gray-600 hover:text-white text-lg w-full no-underline sm:w-auto sm:px-4 py-2 sm:py-1 sm:pt-2" href="#socialMedia">Social Media</a>
+    </div>
+  </nav>
+</header>
+<!-- end header and menu content -->
+
+<main class="content">
+  <!-- first part of main section -->
+  <div class="bg-gray-100 grid lg:grid-cols-2 2xl:grid-cols-5">
+   <div class="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:px-12 lg:py-24 lg:max-w-full xl:mr-0 2xl:col-span-2">
+       <div class="xl:max-w-xl">
+       <img class="mt-6 pt-2 rounded-lg shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover object-center lg:hidden" src="/assets/treeAndBuilding.7ca74e3f.jpg" alt="Building around tree">
+       <h1 class="mt-6 md:text-6xl font-bold text-gray-900 sm:mt-8 sm:text-3xl lg:text-3xl xl:text-4xl">Build alongside the environment.
+           <br class="sm:hidden md:hidden">
+           <br class="hidden lg:inline sm:inline">
+           <span class="text-green-700">Without working against it.</span></h1>
+       <p class="mt-2 text-gray-600 sm:mt-4 sm:text-2xl">
+       Environ Builders understands the importance of sustainability.
+       We work with you to build new eco friendly structures or renew existing
+       ones to incorporate best practices.
+       </p>
+
+       <div class="mt-4 space-x-1 sm:mt-6">
+           <a class="btn btn-primary shadow-lg hover:-translate-y-0.5 transform transition" href="#contact">Book your consult</a>
+           <a class="btn btn-secondary" href="#more">Learn More</a>
+       </div>
+
+   </div>
+   </div>
+   <!-- image to use for split panel view at larger break point -->
+   <div class="hidden relative lg:block 2xl:col-span-3">
+       <img class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/treeAndBuilding.7ca74e3f.jpg" alt="Building around tree">
+
+   </div>
+</div>
+  <!-- end first part of main section -->
+
+  <!-- Second part of main section -->
+<h1 class="text-3xl sm:text-5xl font-bold text-center mt-12 p-12 uppercase text-green-700">Some of our projects</h1>
+<!-- First project -->
+  <div class="grid lg:grid-cols-2 2xl:grid-cols-5 min-h-screen text-center py-12">
+    <!-- Image for desktop view -->
+    <div class="hidden relative lg:block 2xl:col-span-3">
+        <img class="absolute inset-0 w-full h-full object-cover object-center pl-12 py-24" style="width:600px" src="/assets/fieldWindmills.b198efed.jpg" alt="Rolling hills and windmills">
+    </div>
+
+    <!-- responsive h2 -->
+    <h2 class="sm:hidden uppercase font-bold text-green-700 text-lg">
+      Lorum ipsum dolor sit amet
+    </h2>
+    <!-- Image for responsive view -->
+    <div class="pl-4 sm:hidden">
+      <img class="mt-4 pt-2 rounded-xl shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover object-center lg:hidden" style="width:450px" src="/assets/fieldWindmills.b198efed.jpg" alt="Rolling hills and windmills">
+    </div>
+    <div class="p-4">
+      <h2 class="hidden uppercase font-bold mt-4 text-green-700 sm:inline">
+        Lorem ipsum dolor sit amet
+      </h2>
+
+      <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl text-justify pr-6">Inani vocent viderer te per, et sed diceret singulis dissentiet. Iisque
+        vocibus ne vis, in vel constituam delicatissimi, mei quem melius maiorum
+        ea. Ea vulputate definiebas dissentiet has. Id quodsi disputando mei, ex
+        ius placerat interpretaris, in ius consul instructior definitiones. Ut
+        pri putent volutpat, ei quas rebum ius, an nam alii error graecis. Quas
+        corpora phaedrum an est.
+      </p>
+
+      <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl text-justify pr-6">
+        Est mutat novum sapientem ea, eu lucilius mediocrem sea, ad quo autem
+        tractatos. Ei dolor qualisque mea, et clita molestie moderatius vel, cum
+        eu quando volutpat. Ex choro tempor his, cu his probatus consequat,
+        mucius maiorum consetetur an nam. Quot habeo minimum sit te, elitr
+        sensibus sit te. Mea expetenda adversarium cu, no affert feugiat saperet
+        vel.
+      </p>
+    </div>
+  </div>
+  <!-- End first project -->
+
+  <!-- Second project -->
+  <div class="grid lg:grid-cols-2 2xl:grid-cols-5 min-h-screen text-center py-12">
+    <!-- Image for desktop view -->
+    <div class="hidden relative lg:block 2xl:col-span-3">
+        <img class="absolute inset-0 w-full h-full object-cover object-center pl-12 py-24" style="width:600px"  src="/assets/buildingSiteTrees.d4d333ea.jpg" alt="City building site and strip of trees and green space">
+    </div>
+
+    <!-- responsive h2 -->
+    <h2 class="sm:hidden uppercase font-bold text-green-700 text-lg">
+      Sed ut perspiciatis
+    </h2>
+    <!-- Image for responsive view -->
+    <div class="pl-4 sm:hidden">
+      <img class="mt-4 pt-2 rounded-lg shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover object-center lg:hidden  rounded-xl" style="width:450px" src="/assets/buildingSiteTrees.d4d333ea.jpg" alt="City building site and strip of trees and green space">
+    </div>
+    <div class="p-4">
+      <h2 class="hidden uppercase font-bold mt-4 text-green-700 sm:inline">
+        Sed ut perspiciatis
+      </h2>
+      <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl text-justify pr-6">
+        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+        consectetur, adipisci velit, sed quia non numquam eius modi tempora
+        incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim
+         ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+         laboriosam, nisi ut aliquid ex ea commodi consequatur.
+      </p>
+      <br>
+
+      <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl text-justify pr-6">
+        Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+        quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
+        voluptas nulla pariatur? At vero eos et accusamus et iusto odio
+        dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+        corrupti quos dolores et quas molestias excepturi sint occaecati.
+      </p>
+    </div>
+  </div>
+  <!-- End second project -->
+
+  <!-- Third project -->
+  <div class="grid lg:grid-cols-2 2xl:grid-cols-5 min-h-screen text-center py-12">
+    <!-- Image for desktop view -->
+    <div class="hidden relative lg:block 2xl:col-span-3">
+        <img class="absolute inset-0 w-full h-full object-cover object-center pl-12 py-24" style="width:600px"  src="/assets/fieldSolarPanels.897f399d.jpg" alt="Green field with solar panels">
+    </div>
+
+    <!-- responsive h2 -->
+    <h2 class="sm:hidden uppercase font-bold text-green-700 text-lg">
+      Fierent deserunt repudiandae
+    </h2>
+    <!-- Image for responsive view -->
+    <div class="pl-4 sm:hidden">
+      <img class="mt-4 pt-2 rounded-xl shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover object-center lg:hidden" style="width:450px" src="/assets/fieldSolarPanels.897f399d.jpg" alt="Green field with solar panels">
+    </div>
+    <div class="p-4">
+      <!-- desktop h2 -->
+      <h2 class="hidden uppercase font-bold mt-4 text-green-700 sm:inline">
+        Fierent deserunt repudiandae
+      </h2>
+      <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl text-justify pr-6">
+        Eros laudem consetetur has an, elit officiis at ius, ex eam alterum
+        aliquid pericula. Ea pri nibh principes, ea mollis eloquentiam
+        adversarium duo, te nominati dissentiunt nam. Putent placerat at mel,
+        no pri movet assentior. Sed cu alienum probatus concludaturque, no usu
+        nobis imperdiet scriptorem. Nam imperdiet definitiones et, in choro
+        clita evertitur eum, ei eros petentium sadipscing qui.
+      </p>
+
+      <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl text-justify pr-6">
+        Mei no cetero facilis disputationi, at pro quot facilis. Noluisse
+        maluisset salutatus nam eu, in per meis homero volumus. Nulla insolens
+        intellegebat no usu, latine officiis sensibus qui ea. Menandri consulatu
+        evertitur at nam. Id his quidam vocibus, at vim altera quidam causae.
+        Ut vix decore doctus docendi.Hinc indoctum quo ea. Propriae delectus
+        comprehensam in qui, agam probo legendos eu per, vis partem option ei.
+      </p>
+    </div>
+  </div>
+  <!-- End third project -->
+
+  <!-- Fourth project -->
+  <div class="grid lg:grid-cols-2 2xl:grid-cols-5 min-h-screen text-center py-12">
+    <!-- Image for desktop view -->
+    <div class="hidden relative lg:block 2xl:col-span-3">
+        <img class="absolute inset-0 w-full h-full object-cover object-center pl-12 py-24" style="width:600px"  src="/assets/highBuildingGreenSpace.44a2361d.jpg" alt="High rise building surrounded by trees and other greenery">
+    </div>
+
+    <!-- responsive h2 -->
+    <h2 class="sm:hidden uppercase font-bold text-green-700 text-lg">
+      Has in magna intellegebat
+    </h2>
+    <!-- Image for responsive view -->
+    <div class="pl-4 sm:hidden">
+      <img class="mt-4 pt-2 rounded-xl shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover object-center lg:hidden" style="width:450px" src="/assets/highBuildingGreenSpace.44a2361d.jpg" alt="High rise building surrounded by trees and other greenery">
+    </div>
+    <div class="p-4">
+      <h2 class="hidden uppercase font-bold mt-4 text-green-700 sm:inline">
+        Has in magna intellegebat
+      </h2>
+      <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl text-justify pr-6">
+        Modus feugiat percipit ex pri. In mucius feugiat ius, ut nobis nostrum
+        posidonium nam, cum iuvaret iracundia ea. Eos te impedit aliquando,
+        antiopam delicata voluptaria vim ne. An duo case homero denique, ad sea
+        vidisse facilis consulatu, eum semper iuvaret at. Cotidieque
+        complectitur vim in. Eam quem invidunt eu, has te soleat partem
+        electram, eu eos luptatum adipisci.
+      </p>
+
+      <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl text-justify pr-6">
+        In eos atqui tacimates philosophia, vim eu graece vituperata. Mel errem
+        recusabo ex, et eam aeque conceptam. Eos ea vero aperiam. Brute labore
+        vix id. Petentium consequat necessitatibus eu pri, duo id ferri ullum
+        lucilius. Ad tota partem electram usu, nemore abhorreant at nec.
+        Adversarium dissentiunt ut est. Cum an praesent mediocrem moderatius.
+        Quis democritum percipitur nam et, an mea delectus honestatis.
+      </p>
+    </div>
+  </div>
+  <!-- End fourth project -->
+
+
+  <!-- Testimonials section -->
+  <div class="border-8  m-2 border-blue-600 rounded-xl">
+    <h1 class="text-3xl sm:text-5xl font-bold text-center mt-12 p-12 uppercase text-green-700">
+      Testimonials
+    </h1>
+    <div class="p-5 lg:px-20 flex flex-col md:flex-row items-center justify-center">
+      <div class="max-w-xs rounded-2xl overflow-hidden shadow-lg m-8">
+        <img class="w-full" src="https://picsum.photos/id/1047/225/140" alt="Sunset in the mountains">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Jean-Paul M. - CEO</div>
+          <p class="text-grey-darker text-base">
+            "Just what I was looking for. After using Environ Builders we saved
+            significant amount from energy improvements!"
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-xs rounded-2xl overflow-hidden shadow-lg m-8">
+        <img class="w-full" src="https://picsum.photos/id/1033/225/140" alt="Sunset in the mountains">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Lou V. - Mayor</div>
+          <p class="text-grey-darker text-base">
+            "Needless to say we are extremely satisfied with the results.
+            Environ Builders is awesome! Professional and effecient"
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-xs rounded-2xl overflow-hidden shadow-lg m-8">
+        <img class="w-full" src="https://picsum.photos/id/1026/225/140" alt="Sunset in the mountains">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Tyrone M. - City Manager</div>
+          <p class="text-grey-darker text-base">
+            "Environ Builders did exactly what you said it does. We've used
+            Environ Builders for the last five years. Thank you so much for your help."
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End testimonials section -->
+
+
+  <!-- fourth part of main section 2/3s width of screen -->
+  <div class="container">
+    <div id="more" class="flex flex-col w-2/3 mx-auto mb-24 tracking-wide">
+      <h1 class="text-3xl sm:text-5xl font-bold text-center mt-12 p-12 uppercase text-green-700">
+        About Us
+      </h1>
+
+      <h2 class="my-3 text-green-700 text-xl text-center font-bold">Our History</h2>
+      <p class="">
+        Vestibulum eros eros, luctus vel justo ut, congue suscipit
+        ligula. Nullam lobortis massa vitae elit fermentum, et luctus nulla
+        lacinia. Sed elementum bibendum augue, eu vulputate odio interdum non.
+        Curabitur suscipit vehicula metus ut suscipit. Proin at consequat nibh.
+        Vivamus ultrices eu est quis facilisis. Morbi facilisis iaculis ex.
+      </p>
+      <br>
+      <p class="">
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+        cubilia curae; Proin eu nibh eu elit iaculis malesuada. Nullam
+        sollicitudin hendrerit eleifend. Curabitur vehicula tempus nunc, a
+        sollicitudin ex eleifend eget. Cras at velit at libero tempus cursus.
+        Aenean a arcu ex. Sed ac nisl dolor. Curabitur nec tortor eget massa
+        pharetra placerat. Donec lacinia et velit eget hendrerit. Sed vulputate
+        nunc eu iaculis scelerisque.
+      </p>
+      <!-- Image for responsive view -->
+      <div class="pl-4 sm:hidden">
+        <img class="mt-4 pt-2 rounded-xl shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover object-center lg:hidden" style="width:450px" src="/assets/constructionCrew.73a96fe1.jpg" alt="High rise building surrounded by trees and other greenery">
+      </div>
+      <!-- Image for desktop view -->
+      <div class="relative">
+          <img class="hidden sm:inline ml-28 sm:mt-8 rounded-xl shadow-xl sm:w-full sm:h-auto sm:object-cover object-center" style="width:600px"  src="/assets/constructionCrew.73a96fe1.jpg" alt="High rise building surrounded by trees and other greenery">
+      </div>
+      <h2 class="my-3 text-green-700 text-xl text-center font-bold mt-10">Our Values</h2>
+      <ul class="list-disc">
+        <li class="py-2">Aenean a scelerisque mauris. Proin nec est vulputate, faucibus leo sed, varius libero.</li>
+        <li class="py-2">Assumenda, quia temporibus eveniet a libero incidunt suscipit</li>
+        <li class="py-2">Quidem, ipsam illum quis sed voluptatum quae eum fugit earum</li>
+        <li class="py-2">Phasellus sed ante at urna luctus volutpat vel id dolor.</li>
+        <li class="py-2"> Aliquam erat volutpat. Nam dui ex, vulputate id condimentum et, pretium eu ligula.</li>
+        <li class="py-2">Aliquam a orci bibendum orci posuere cursus lacinia non ex. Nunc nec risus elit. </li>
+      </ul>
+
+      <div class="w-full sm:w-2/3 h-px bg-grey-light mx-auto my-12"></div>
+      <!-- link to top of page -->
+      <a href="#top" id="bottom" class="inline-block max-w-xs self-center bg-green-700 text-center text-white hover:text-white no-underline border rounded-full border-green-700 hover:border-red-900 hover:bg-red-900 px-12 py-2">Go to Top</a>
+    </div>
+  </div>
+  <!-- End fourth part of main section 2/3s width of screen -->
+</main>
+<!-- end main section -->
+
+<!-- Contact section -->
+<section  class="relative w-full min-h-screen bg-white text-green-700 pt-40 sm:pb-40">
+<h1 class="text-4xl p-4 font-bold tracking-wide">
+    Contact
+</h1>
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-green-700 h-32 w-full"></div>
+
+<!-- wrapper -->
+<div class="relative p-5 lg:px-20 flex flex-col md:flex-row items-center justify-center">
+
+    <!-- Social Media -->
+    <div id="socialMedia" class="w-full md:w-1/2 p-5 md:px-0 mx-5">
+    <div class="bg-white border border-green-700 w-full lg:w-1/2 h-full p-5 pt-8">
+        <h3 class="text-2xl font-semibold mb-5">
+        Our Social Media
+        </h3>
+        <!-- list -->
+        <div class="flex flex-col gap-3">
+        <a href="#" class="flex items-center hover:text-white hover:bg-green-700 p-2">
+            <svg fill="currentColor" class="w-6 h-6 m-2"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+            </svg>
+            Twitter
+        </a>
+        <a href="#" class="flex items-center hover:text-white hover:bg-green-700 p-2">
+            <svg fill="currentColor" class="w-6 h-6 m-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+            <path d="M 21.800781 0 L 2.199219 0 C 1 0 0 1 0 2.199219 L 0 21.800781 C 0 23 1 24 2.199219 24 L 21.800781 24 C 23 24 24 23 24 21.800781 L 24 2.199219 C 24 1 23 0 21.800781 0 Z M 7 20 L 3 20 L 3 9 L 7 9 Z M 5 7.699219 C 3.800781 7.699219 3 6.898438 3 5.898438 C 3 4.800781 3.800781 4 5 4 C 6.199219 4 7 4.800781 7 5.800781 C 7 6.898438 6.199219 7.699219 5 7.699219 Z M 21 20 L 17 20 L 17 14 C 17 12.398438 15.898438 12 15.601563 12 C 15.300781 12 14 12.199219 14 14 C 14 14.199219 14 20 14 20 L 10 20 L 10 9 L 14 9 L 14 10.601563 C 14.601563 9.699219 15.601563 9 17.5 9 C 19.398438 9 21 10.5 21 14 Z"/>
+            </svg>
+            Linkedin
+        </a>
+        <a href="#" class="flex items-center hover:text-white hover:bg-green-700 p-2">
+            <svg fill="currentColor" class="w-6 h-6 m-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" >
+            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+            </svg>
+            Youtube
+        </a>
+        <a href="#" class="flex items-center hover:text-white hover:bg-green-700 p-2">
+            <svg fill="currentColor" class="w-6 h-6 m-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+            <path d="M12,0C5.373,0,0,5.373,0,12c0,6.016,4.432,10.984,10.206,11.852V15.18H7.237v-3.154h2.969V9.927c0-3.475,1.693-5,4.581-5 c1.383,0,2.115,0.103,2.461,0.149v2.753h-1.97c-1.226,0-1.654,1.163-1.654,2.473v1.724h3.593L16.73,15.18h-3.106v8.697 C19.481,23.083,24,18.075,24,12C24,5.373,18.627,0,12,0z"/>
+            </svg>
+            Facebook
+        </a>
+        </div>
+    </div>
+    </div>
+
+    <!-- Book Your Consult -->
+    <form id="contact" action="#" class="w-full md:w-1/2 border border-green-700 p-6 bg-white">
+    <h2 class="text-2xl pb-3 font-semibold">
+        Send Message
+    </h2>
+    <div>
+        <div class="flex flex-col mb-3">
+        <label for="name">Name</label>
+        <input
+            type="text" id="name"
+            class="px-3 py-2 bg-white text-black border border-green-700 focus:border-green-700 focus:outline-none focus:ring focus:bg-white focus:text-black"
+            autocomplete="off"
+        >
+        </div>
+        <div class="flex flex-col mb-3">
+        <label for="email">Email</label>
+        <input
+            type="text" id="email"
+            class="px-3 py-2 bg-white text-black border border-green-700 focus:border-green-700 focus:outline-none focus:ring focus:bg-white focus:text-black"
+            autocomplete="off"
+        >
+        </div>
+        <div class="flex flex-col mb-3">
+        <label for="message">Message</label>
+        <textarea
+            rows="4" id="message"
+            class="px-3 py-2 bg-white text-black border border-green-700 focus:border-green-700 focus:outline-none focus:ring focus:bg-white focus:text-black"
+        ></textarea>
+        </div>
+    </div>
+    <div class="w-full pt-3">
+        <button type="submit" class="w-full btn btn-primary px-4 py-2 transition duration-50 focus:outline-none font-semibold hover:bg-red-500 hover:text-white text-xl cursor-pointer">
+        Book Your Consult
+        </button>
+    </div>
+    </form>
+</div>
+</section>
+
+<!-- End contact section -->
+
+
+<footer class="footer bg-green-700 relative pt-1 ">
+    <div class="container mx-auto px-6">
+      <!-- Logo and Company Name -->
+      <div class="hidden sm:inline w-full sm:w-auto self-start sm:self-center flex flex-row sm:flex-none flex-no-wrap justify-between items-center sm:float-right hover:bg-green-500">
+        <a href="#top" class="flex space-x-4 no-underline py-1">
+          <img class="h-12" src="data:image/png;base64,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" alt="Construction Machinery Logo">
+          <h1 class="font-bold text-sm text-white tracking-wide">ENVIRON <br>BUILDERS</h1>
+        </a>
+      </div>
+
+        <div class="sm:flex sm:mt-2">
+            <div class="mt-2 sm:mt-0 sm:w-full sm:px-1 flex flex-col md:flex-row justify-between">
+                <div class="flex flex-col">
+                    <span class=""><a href="#" class="tracking-tighter text-white font-bold rounded-lg pl-4 pr-4 hover:bg-gray-600 hover:text-white text-sm w-full no-underline sm:w-auto">About Us</a></span>
+                    <span class=""><a href="#" class="tracking-tighter text-white font-bold rounded-lg pl-4 pr-4 hover:bg-gray-600 hover:text-white text-sm w-full no-underline sm:w-auto">Projects</a></span>
+                    <span class=""><a href="#" class="tracking-tighter text-white font-bold rounded-lg pl-4 pr-4 hover:bg-gray-600 hover:text-white text-sm w-full no-underline sm:w-auto">Testimonials</a></span>
+                    <span class=""><a href="#socialMedia" class="tracking-tighter text-white font-bold rounded-lg pl-4 pr-4 hover:bg-gray-600 hover:text-white text-sm w-full no-underline sm:w-auto">Social Media</a></span>
+                </div>
+
+            </div>
+        </div>
+        <p class="text-sm text-white pb-4 font-bold text-center">
+            © 2021 by ENVIRON BUILDERS
+        </p>
+
+    </div>
+    <div class="container mx-auto px-6">
+        <div class=" border-t-2 border-white flex flex-col items-center">
+            <div class="sm:w-2/3 text-center py-2">
+
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- end footer section -->
+
+</body>
+
+<script type="text/javascript">
+var nav = document.getElementById('site-menu');
+var header = document.getElementById('top');
+
+window.addEventListener('scroll', function() {
+if (window.scrollY >=400) { // adjust this value based on site structure and header image height
+  nav.classList.add('nav-sticky');
+  header.classList.add('pt-scroll');
+} else {
+  nav.classList.remove('nav-sticky');
+  header.classList.remove('pt-scroll');
+}
+});
+
+function navToggle() {
+      var btn = document.getElementById('menuBtn');
+      var nav = document.getElementById('menu');
+
+      btn.classList.toggle('open');
+      nav.classList.toggle('flex');
+      nav.classList.toggle('hidden');
+  }
+</script>
+
+</html>
